@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>游走的星星</title> 
+							<!--文档的标题-->
+<style type="text/css">
+<!--
+body {
+	background-color: #00FF00;
+}
+-->
+</style></head>
+<body   >
+<script language="javascript">
+delay = 2000;										//设置图片显示的时间间隔
+imageNum = 1 ;
+theImages = new Array()					;			// 创建一个Image()对象，并给数组赋值
+for(i = 1; i < 16; i++)
+{
+   theImages[i] = new Image()			;			//创建一个新的Image对象
+   theImages[i].src = "a" + i + ".jpg" ;
+} 
+function animate() 
+{
+   document.animation.src = theImages[imageNum].src  ;//显示图片
+   imageNum++		;								//图片索引
+   if(imageNum >15)									//显示到最后一张时跳到第一张
+    {
+      	imageNum = 1 ;
+	 }
+}
+
+  
+  function Button1_onclick()
+  {
+  //document.write.("大学生活缩略图");
+  alert("大学生活缩略图");
+  }
+  
+</script>
+  <div align="center">
+  <img name="animation" src="image1.gif" alt="正在加裁图片请稍等....'" onLoad="setTimeout('animate()', delay)" onerror="this.src='a17.jpg'" height="300">
+ </div>
+  <p>
+    <!--触发onerro、onLoad事件-->
+  </p>
+  <table width="80%" border="0" align="center" cellpadding="1" cellspacing="0">
+    <tr>
+      <th scope="col">        <div align="center"><input id="Button1" type="button" value="all is well" onclick="return Button1_onclick() "></div></th>
+    </tr>
+  </table>
+
+  
+  <p>&nbsp; </p>
+</body>
+</html>
