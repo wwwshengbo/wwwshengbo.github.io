@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>实现简单的时钟</title>
+<center><br>
+<meta http-equiv="content-type" content="text/html;charset=gb2312">
+<title>改变背景颜色</title>
+<script language="javascript">
+function change(color)
+{
+document.bgColor=color;
+}
+</script >
+</head>
+<body>
+<center>
+<h1>移过来我变色给你看看！</h1>
+
+<font size="5">
+<span onMouseover="change('orange')">变橘色</span >
+<span onMouseover="change('yellow')">变黄色</span >
+<span onMouseover="change('purple')">变紫色</span >
+</font>
+</center>
+
+<br>
+<br>
+<script language="javascript">
+<!--
+tmpDate=new Date()
+date=tmpDate.getDate ()
+month=tmpDate.getMonth()+1;
+year=tmpDate.getYear();
+document.write(year);
+document.write("年");
+document.write(month);
+document.write("月");
+document.write(date);
+document.write("日");
+//-->
+</script>
+<p>
+
+  <header >  
+<script language="JavaScript"> 
+ 
+  function tick() {  var year,month,day,hours,minutes,seconds,ap;  var intYear,intMonth,intDay,intHours,intMinutes,intSeconds; var today;  today=new Date(); 
+ intYear=today.getYear(); intMonth=today.getMonth()+1; intDay=today.getDate(); intHours=today.getHours(); intMinutes=today.getMinutes(); intSeconds=today.getSeconds();  
+ </script> 
+ <div id="jb51" class="STYLE4"></div>  
+<script>setInterval("document.getElementById('jb51').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+</script>
+  </header >
+
+  
+</p>
+
+<p>
+
+<iframe name="sinaWeatherTool" src="http://weather.news.sina.com.cn/chajian/iframe/weatherStyle30.html?
+city=%E6%BF%AE%E9%98%B3" width="166" height="152" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">
+</iframe>
+</p>
+
+<p>
+
+<iframe name="sinaWeatherTool" src="http://weather.news.sina.com.cn/chajian/iframe/weatherStyle0.html?
+city=%E6%BF%AE%E9%98%B3" width="200" height="50" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">
+</iframe>
+
+</p>
+
+<body bgcolor="pink">
+</center>
+</body>
+</html>
